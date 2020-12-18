@@ -1,5 +1,4 @@
 
-
 # command list for the bot
 
 commands = {
