@@ -31,14 +31,16 @@ def getCommandListForDiscordMessage():
   message_reply = """
     **Command List**
     **Github**
-    {}
+    -ds <username>                            -     To open your github profile
+    -ds <username> <repository_name>          -     To open particular repository from your github profile
     
     **Documentation**
-    {}
+    -ds docs                                  -     To open the documentation of DesignSystem
+    -ds docs <topic>                          -     To open the documentation for a particular topic
     
     **General**
-    {}
+    -ds help                                  -     To open the cheat sheet
     
-  """.format(getCommandsForGithub(), getCommandsForDocumentation(), getCommandsForGeneral())
+  """
   
   return message_reply

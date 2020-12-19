@@ -6,6 +6,8 @@ import discord
 import details as details
 import os
 
+from alive import alive as alive
+
 token = os.getenv('TOKEN')
 
 # class DesignSystemBot:
@@ -35,6 +37,8 @@ async def on_message(message):
   if message.content.startswith('-ds'):
     await message.channel.send(commands.getCommandListForDiscordMessage())
     
+
+alive()
 
 # running the bot on the line to be used
 client.run(token)
