@@ -1,5 +1,9 @@
-
+from typing import List
+import webbrowser as webbrowser
+import quotations as quotations
 # command list for the bot
+
+
 
 commands = {
   "github": {
@@ -7,12 +11,12 @@ commands = {
     "-ds <username> <repository_name>": "To open particular repository from your github profile"
   },
   "documentation": {
-    "-ds docs": "To open the documentation of DesignSystem",
-    "-ds docs <topic>": "To open the documentation for a particular topic"
+    "-ds docs": "To open the documentation of DesignSystem"
   },
   "general": {
     "-ds help": "To open the cheat sheet"
-  }
+  },
+  "quotes": list(quotations.quotations)
 }
 
 def getCommands():
@@ -31,16 +35,18 @@ def getCommandListForDiscordMessage():
   message_reply = """
     **Command List**
     **Github**
-    -ds <username>                            -     To open your github profile
-    -ds <username> <repository_name>          -     To open particular repository from your github profile
+    `-ds <username>`  -     To open your github profile
+    `-ds <username> <repository_name>`  -     To open particular repository from your github profile
     
     **Documentation**
-    -ds docs                                  -     To open the documentation of DesignSystem
-    -ds docs <topic>                          -     To open the documentation for a particular topic
+    `-ds docs`  -     To open the documentation of DesignSystem
     
     **General**
-    -ds help                                  -     To open the cheat sheet
-    
+    `-ds help`  -     To open the cheat sheet 
   """
   
   return message_reply
+
+
+def getDesignSystemBotDocumentationURL():
+  return 'https://github.com/yashsehgal/designsystem-bot/blob/master/README.md'
