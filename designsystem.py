@@ -11,6 +11,8 @@ import discord
 import details as details
 import os
 
+import quotations as quotations
+
 from alive import alive as alive
 
 token = os.getenv('TOKEN')
@@ -38,27 +40,53 @@ async def on_message(message):
   if message.author == client.user:
     return 
   
-  if message.content.startswith('-ds'):
-    await message.channel.send(commands.getCommandListForDiscordMessage())
+  author_username = str(message.author)
+  author_username = author_username[:-5]
+  # print(author_username[:-5])
+  
+  if message.content.startswith('-ds') and message.content == "-ds":
+    await message.channel.send(commands.getCommandListForDiscordMessage(author=author_username))
   
   # checking the starting command of the message
-  if message.content.startswith('-ds') and len(message.content) < 3:
-    await message.channel.send(commands.getCommandListForDiscordMessage())
+  # if message.content.startswith('-ds') and len(message.content) < 3:
+  #   await message.channel.send(commands.getCommandListForDiscordMessage())
     
-  if message.content.startswith('-ds') and message.content[3] != None and len(message.content) > 3 and message.content == "-ds help":
-    await message.channel.send(commands.getCommandListForDiscordMessage())
+  if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and message.content == "-ds help":
+    await message.channel.send(commands.getCommandListForDiscordMessage(author=author_username))
     
-  if message.content.startswith('-ds') and message.content[3] != None and len(message.content) > 3 and (message.content == "-ds docs" or message.content == "-ds documentation"):
-    await message.channel.send(commands.getDesignSystemBotDocumentationURL())
+  if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and (message.content == "-ds docs" or message.content == "-ds documentation"):
+    await message.channel.send(commands.getDesignSystemBotDocumentationURL(author=author_username))
     
-  if message.content.startswith('-ds') and message.content[3] != None and len(message.content) > 3 and (message.content[4] == '<'):
+  if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and (message.content[4] == '<'):
     profile_username = ""
-    counter = 4
-    while message.content[counter] != '>':
-      profile_username += message.content[counter]
+    repository_name = ""
+    _counter = 5
+    while message.content[_counter] != '>':
+      profile_username += message.content[_counter]
+      _counter += 1
+      
+    try:
+      if message.content[_counter+2] != None and message.content[_counter+2] == '<':
+        __counter_ = _counter+3
+        while message.content[__counter_] != '>':
+          repository_name += message.content[__counter_]
+          __counter_ += 1
+        print(">>> username and github repository found")
+    except IndexError:
+      print(">>> username found")
     
-    print(profile_username)
-  
+    
+    
+    url = 'https://www.github.com/{}/{}'.format(profile_username, repository_name)
+    # print(url)
+    # print(profile_username)
+
+    # sending the user's url on discord
+    await message.channel.send(url)
+    
+  if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and (message.content == "-ds motivate" or message.content == "-ds quote"):
+    await message.channel.send(quotations.generateQuotation())
+    
   # print(len(message.content))
     
   # if message.content.startswith('-ds') and message[4] == " " and message[5] != None:

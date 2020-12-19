@@ -31,22 +31,25 @@ def getCommandsForDocumentation():
 def getCommandsForGeneral():
   return commands.get("general")
 
-def getCommandListForDiscordMessage():
+def getCommandListForDiscordMessage(author):
   message_reply = """
+    Only for you @{}
     **Command List**
     **Github**
     `-ds <username>`  -     To open your github profile
     `-ds <username> <repository_name>`  -     To open particular repository from your github profile
     
     **Documentation**
-    `-ds docs`  -     To open the documentation of DesignSystem
+    `-ds docs` / `-ds documentation`  -     To open the documentation of DesignSystem
     
     **General**
     `-ds help`  -     To open the cheat sheet 
-  """
+  """.format(author)
   
   return message_reply
 
 
-def getDesignSystemBotDocumentationURL():
-  return 'https://github.com/yashsehgal/designsystem-bot/blob/master/README.md'
+def getDesignSystemBotDocumentationURL(author):
+  return """  Only for you @{}
+              https://github.com/yashsehgal/designsystem-bot/blob/master/README.md
+        """.format(author)
