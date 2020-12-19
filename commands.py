@@ -26,3 +26,19 @@ def getCommandsForDocumentation():
 
 def getCommandsForGeneral():
   return commands.get("general")
+
+def getCommandListForDiscordMessage():
+  message_reply = """
+    **Command List**
+    **Github**
+    {}
+    
+    **Documentation**
+    {}
+    
+    **General**
+    {}
+    
+  """.format(getCommandsForGithub(), getCommandsForDocumentation(), getCommandsForGeneral())
+  
+  return message_reply
