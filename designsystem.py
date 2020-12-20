@@ -11,6 +11,7 @@ import discord
 import details as details
 import os
 
+import greetings as greetings
 import quotations as quotations
 
 from alive import alive as alive
@@ -87,6 +88,10 @@ async def on_message(message):
   if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and (message.content == "-ds motivate" or message.content == "-ds quote"):
     await message.channel.send(quotations.generateQuotation())
     
+  # new feature which will greet the user according to the time of the system
+  if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and message.content == "-ds greet":
+    greetings.checkGreetingType()
+  
   # print(len(message.content))
     
   # if message.content.startswith('-ds') and message[4] == " " and message[5] != None:

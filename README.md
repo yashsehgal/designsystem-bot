@@ -21,7 +21,32 @@ It has features like opening GitHub-Profiles, GitHub-Pages and much more. The fo
 
 ## Commands and How to use?
 
+- Github Related Commands
+
+    |Command                                  | Description |
+    |-----------------------------------------|-------------|
+    |```-ds <username>```                     | To get your github profile link|
+    |```-ds <username> <repository_name>```   | To get link to your repository on github|
+    
+- Documentation Related Commands
+
+    |Command                                  | Description |
+    |-----------------------------------------|-------------|
+    |```-ds docs / -ds documentation```       | To get documentation for designsystem-bot|
+
+- General Commands
+
+    |Command                                  | Description |
+    |-----------------------------------------|-------------|
+    |```-ds help```                           | To see the helping cheat sheet|
+    |```-ds motivate / -ds quote```           | To get random motivational messages |
+    |```-ds greet```                          | To get random greetings according to the time|
+    
+
+
+
 ## How to Integrate?
+### [Click here to integrate this bot to your server](https://discord.com/api/oauth2/authorize?client_id=789135107486777354&permissions=0&scope=bot)
 
 ## Contributing
 
