@@ -50,6 +50,7 @@ It has features like opening GitHub-Profiles, GitHub-Pages and much more. The fo
 
 ## Contributing
 
+For new open source developers and for those who are new here can get started by referring [```CONTRIBUTING.md```](https://github.com/yashsehgal/designsystem-bot/blob/master/CONTRIBUTING.md)
 ## Sponsors
 
 ## Open Source Events
