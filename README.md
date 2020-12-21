@@ -55,4 +55,6 @@ For new open source developers and for those who are new here can get started by
 
 ## Open Source Events
 
+![ds-loves-open-source](https://raw.githubusercontent.com/yashsehgal/designsystem-bot/master/love-open-source%402x.png)
+
 ## Other Useful links and resources
