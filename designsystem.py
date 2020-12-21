@@ -80,8 +80,6 @@ async def on_message(message):
     
     url = 'https://www.github.com/{}/{}'.format(profile_username, repository_name)
     # print(url)
-    # print(profile_username)
-
     # sending the user's url on discord
     await message.channel.send(url)
     
