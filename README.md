@@ -6,20 +6,22 @@ It has features like opening GitHub-Profiles, GitHub-Pages and much more. The fo
 
 ## List of Topics
 
-- [Overview]()
-- [Features]()
-- [Commands and How to use?]()
-- [How to Integrate?]()
-- [Contributing]()
-- [Sponsors]()
-- [Open Source Events]()
-- [Other useful links and resources]()
+- [Overview](#overview)
+- [Features](#features)
+- [Commands](#commands)
+- [Setup](#setup)
+- [Contributing](#contributing)
+- [Sponsors](#sponsors)
+- [Open Source Events](#open-source-events)
+- [Other useful links and resources](#other-useful-links-and-resources)
 
 ## Overview
 
+![designsystem-logo-gif](https://raw.githubusercontent.com/yashsehgal/designsystem-bot/master/designsystem-gif-profile.gif)
+
 ## Features
 
-## Commands and How to use?
+## Commands
 
 - Github Related Commands
 
@@ -45,7 +47,7 @@ It has features like opening GitHub-Profiles, GitHub-Pages and much more. The fo
 
 
 
-## How to Integrate?
+## Setup
 ### [Click here to integrate this bot to your server](https://discord.com/api/oauth2/authorize?client_id=789135107486777354&permissions=0&scope=bot)
 
 ## Contributing
