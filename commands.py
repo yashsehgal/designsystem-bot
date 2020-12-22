@@ -14,7 +14,8 @@ commands = {
     "-ds docs": "To open the documentation of DesignSystem"
   },
   "general": {
-    "-ds help": "To open the cheat sheet"
+    "-ds help": "To open the cheat sheet",
+    "-ds motivate / -ds quote": "To get random motivational messages"
   },
   "quotes": list(quotations.quotations)
 }
@@ -44,6 +45,7 @@ def getCommandListForDiscordMessage(author):
     
     **General**
     `-ds help`  -     To open the cheat sheet 
+    `-ds motivate` / `-ds quote`  -     To get random motivational messages
   """.format(author)
   
   return message_reply
@@ -53,3 +55,13 @@ def getDesignSystemBotDocumentationURL(author):
   return """  Only for you @{}
               https://github.com/yashsehgal/designsystem-bot/blob/master/README.md
         """.format(author)
+        
+        
+def displayURLforGithub(url, author):
+  return """
+    Only for you @{}
+    Searching...
+    
+    There you go
+    {}
+  """.format(author, url)
