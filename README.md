@@ -17,7 +17,8 @@ It has features like opening GitHub-Profiles, GitHub-Pages and much more. The fo
 
 ## Overview
 
-![designsystem-logo-gif](https://raw.githubusercontent.com/yashsehgal/designsystem-bot/master/designsystem-gif-profile.gif)
+<img src="designsystem-gif-profile.gif"
+style="width: 50%;">
 
 ## Features
 
