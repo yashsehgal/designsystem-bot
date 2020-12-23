@@ -11,6 +11,8 @@ import discord
 import details as details
 import os
 
+import memes as memes
+
 import greetings as greetings
 import quotations as quotations
 
