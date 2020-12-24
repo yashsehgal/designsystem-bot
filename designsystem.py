@@ -1,3 +1,4 @@
+from discord.errors import HTTPException
 from jinja2.utils import concat
 import pandas as pd
 import os
@@ -11,7 +12,7 @@ import discord
 import details as details
 import os
 
-import memes as memes
+# import memes as memes
 
 import greetings as greetings
 import quotations as quotations
@@ -125,7 +126,71 @@ async def on_message(message):
   except IndexError:
     print(">>> IndexError: Index value is overflowing <'feature: -ds greet'>")
   # print(len(message.content))
-
+  
+  
+  # method for saving user details command for portfolio feature
+  
+  try:
+    try:
+      if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and ("-ds portfolio:" in message.content and message.content[4] == 'p'):
+        new_username = author_username
+        new_user_discord_id = author_discord_id
+        new_first_name = ""
+        new_last_name = ""
+        new_portfolio_url = ""
+        
+        '''
+          writing a set of methods to check all the features
+        '''
+        
+        firstname_counter = 0
+        lastname_counter = 0
+        url_counter = 0
+        
+        # trying to fetch firstname
+        try:
+          if message.content[14] != None:
+            firstname_counter = 15
+            while message.content[firstname_counter] != ',':
+              new_first_name += message.content[firstname_counter]
+              firstname_counter += 1
+        except IndexError:
+          print(">>> IndexError: Index value is overflowing <'feature: -ds portfolio'>")
+          
+        try:
+          if message.content[firstname_counter+2] != None:
+            lastname_counter = firstname_counter + 2
+            while message.content[lastname_counter] != ',':
+              new_last_name += message.content[lastname_counter]
+              lastname_counter += 1
+        except IndexError:
+          print(">>> IndexError: Index value is overflowing <'feature: -ds portfolio'>")
+          
+        try:
+          if message.content[lastname_counter+2] != None:
+            url_counter = lastname_counter+2
+            while message.content[url_counter] != None:
+              new_portfolio_url += message.content[url_counter]
+              url_counter += 1
+        except IndexError:
+          print(">>> IndexError: Index value is overflowing <'feature: -ds portfolio'>")
+        
+        fetch_users.saveNewUserEntry(author_username, author_discord_id, message.content)
+        await message.channel.send(commands.savePortfolioDetails(author_username, author_discord_id, new_first_name, new_last_name, new_portfolio_url))
+    except IndexError:
+      print(">>> IndexError: Index value is overflowing <'feature: -ds portfolio'>")
+    
+    
+    # implementing user-portfolio viewer method
+    try:
+      if message.content.startswith('-ds') and message.content[4] != None and len(message.content) > 4 and (message.content == "-ds portfolio"):
+        fetch_users.saveNewUserEntry(author_username, author_discord_id, message.content)
+        await message.channel.send(commands.getUserPortfolioDetails(author_name=author_username))
+    except IndexError:
+      print(">>> IndexError: Index value is overflowing <'feature: -ds portfolio'>") 
+  
+  except HTTPException:
+    print(">>> Ignoring HTTPException")
 
 alive()
 

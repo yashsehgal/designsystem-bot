@@ -33,7 +33,7 @@ class TestMethods:
   
   def checkGithubDocumentationURL(self):
     if self.commandObject.getDesignSystemBotDocumentationURL() != None: return True
-    else: return False  
+    else: return False
   
 '''
   Write test methods to test various methods in this file.
