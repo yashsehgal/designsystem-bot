@@ -1,0 +1,90 @@
+body {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.header {
+  background-color: white;
+  padding: 2em;
+}
+
+.header-list {
+  text-align: center;
+}
+
+.option {
+  color: #757575;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.option:hover {
+  color: black;
+}
+
+.non-decorated {
+  text-decoration: none;
+}
+
+#main {
+  overflow: hidden;
+  text-align: center;
+}
+
+.headline {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Poppins', monospace;
+  margin-top: 1em;
+}
+
+.desc {
+  color: black;
+}
+
+.card-title {
+  font-family: 'Poppins', monospace;
+  color: black;
+  font-size: larger;
+}
+
+.card-desc {
+  color: black;
+}
+
+.flex-card {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+.card-flex-box {
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.analysis-card {
+  outline: auto;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+  width: 45%;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.analysis-card:hover {
+  background: silver;
+}
+
+.check-button {
+  color: black;
+  font-family: 'Poppins', monospace;
+}
+/*# sourceMappingURL=style.css.map */
