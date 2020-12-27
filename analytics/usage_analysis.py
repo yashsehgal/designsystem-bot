@@ -13,6 +13,8 @@
   #? To make seprate methods for all the features
 '''
 
+import pandas as pd
+
 def fetchDataForOperation(data_tag):
   filename = ""
   isFileAvailable = False
@@ -21,7 +23,19 @@ def fetchDataForOperation(data_tag):
   if data_tag == "command":
     # complete analysis of command usage
     # preparing complete dataset for this feature
-    pass
+    
+    filename = ""
+    data = pd.read_csv(filename)
+    
+    dataset.append({
+      "username": data.username,
+      "discord_id": data.discord_id,
+      "date": data.date,
+      "time": data.time,
+      "command": data.command_by_user
+    })
+    
+    print(dataset)
     
   elif data_tag == "portfolio":
     # complete analysis of portfolios
@@ -44,3 +58,11 @@ def analyseDataForCommands(dataset):
 
 def analyseCompleteBot(dataset):
   pass
+
+
+def testing_method():
+  fetchDataForOperation("command")
+  
+  
+if __name__ == "__main__":
+  testing_method()

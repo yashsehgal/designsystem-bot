@@ -196,4 +196,3 @@ alive()
 
 # running the bot on the line to be used
 client.run(token)
-  
