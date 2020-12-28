@@ -43,7 +43,9 @@ style="width: 50%;">
     |-----------------------------------------|-------------|
     |```-ds help```                           | To see the helping cheat sheet|
     |```-ds motivate / -ds quote```           | To get random motivational messages |
-    |```-ds greet```                          | To get random greetings according to the time|
+    |```-ds greet```                          | To get random greetings according to the time (Currently not working)|
+    |```-ds portfolio: FirstName, LastName, PortfolioLink```    | To create a new entry for your portfolio|
+    |```-ds portfolio```    | To share your portfolio saved in the bot|
     
 
 
