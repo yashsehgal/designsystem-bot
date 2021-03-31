@@ -1,3 +1,10 @@
+::selection {
+  background-color: black;
+  // background-image: url('/love-open-source@2x.png');
+  color: white;
+}
+
+
 body {
   margin-top: 0;
   margin-left: 0;
@@ -17,7 +24,7 @@ body {
   color: rgb(117, 117, 117);
   margin-left: 2em;
   margin-right: 2em;
-  // font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .option:hover {
@@ -45,6 +52,7 @@ body {
 
 .desc {
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-title {
@@ -54,7 +62,8 @@ body {
 }
 
 .card-desc {
-  color: black;
+  color: rgb(49, 49, 49);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex-card {
