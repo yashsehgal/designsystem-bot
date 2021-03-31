@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+:root {
+  --general-font: "Poppins", sans-serif;
+  --general-description-font: "Work Sans", sans-serif;
+  --primary-color: rgb(51, 51, 51);
+  --secondary-color: white;
+  --color-blue: rgb(102, 102, 255);
+  --color-blue-hover: rgb(25, 25, 182);
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 6em;
+}
+
+.header {
+  background-color: #2e2e2e;
+  padding: 1.4em;
+}
+
+.header-list {
+  text-align: center;
+}
+
+.option {
+  color: gray;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.option:hover {
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  color: white;
+}
+
+.non-decorated {
+  text-decoration: none;
+}
+
+.application {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
+
+#headline {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.4em;
+}
+
+.section {
+  margin-top: 6em;
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.option_card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 20%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background-color: white;
+  -webkit-box-shadow: 4px 8px 18px rgba(187, 187, 187, 0.473);
+          box-shadow: 4px 8px 18px rgba(187, 187, 187, 0.473);
+  overflow: hidden;
+}
+
+.option_title {
+  font-family: "Work Sans", sans-serif;
+  color: #2e2e2e;
+}
+
+.get_option_button {
+  color: white;
+  background-color: #4949ff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  padding: 1em;
+  border-radius: 4px;
+  margin-top: 1em;
+  border: none;
+}
+
+.get_option_button:hover {
+  background-color: #2d2de0;
+  -webkit-box-shadow: 2px 4px 12px rgba(73, 73, 255, 0.253);
+          box-shadow: 2px 4px 12px rgba(73, 73, 255, 0.253);
+}
+
+.secondaryButton_Notification {
+  color: var(--color-blue);
+  font-family: var(--general-description-font);
+  background-color: white;
+  border-color: var(--color-blue);
+  border: solid;
+  border-radius: 4px;
+  padding: 18px;
+}
+
+.secondaryButton_Notification:hover {
+  background-color: var(--color-blue-hover);
+  -webkit-box-shadow: 2px 2px 12px rgba(70, 131, 180, 0.529);
+          box-shadow: 2px 2px 12px rgba(70, 131, 180, 0.529);
+  background-color: rgba(70, 131, 180, 0.129);
+  color: white;
+  border: white solid;
+}
+
+.notification {
+  margin-top: 10em;
+  padding: 2em;
+  background-color: var(--color-blue);
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border-radius: 8px;
+}
+
+.notification-title {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+.notification-description {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    display: block;
+  }
+  .option_card {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+    width: 46%;
+  }
+  .header-list :nth-child(1) {
+    display: none;
+  }
+  .notification {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
