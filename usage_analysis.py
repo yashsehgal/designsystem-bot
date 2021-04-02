@@ -18,6 +18,7 @@ import requests as requests
 import urllib.request
 import os as os
 from matplotlib import pyplot as plt
+import nltk
 
 class Analysis:
   def __init__(self) -> None:
@@ -85,6 +86,7 @@ class Analysis:
       plt.hist((self.command_usage.get("greet") * _LENGTH) / 100)
       plt.hist((self.command_usage.get("portfolio") * _LENGTH) / 100)
       plt.legend(plottable_data_legend)
+      plt.title("Statistics of Commands")
       
       try:
         plt.savefig('commands_usage_plot.png')
@@ -98,7 +100,8 @@ class Analysis:
   def analyzeUserStatus(self):
     pass
   
-if __name__ == '__main__':
+
+def runThisScript():
   analyzer = Analysis()
   print("> RUNNING ANALYZE EVERYTHING METHOD")
   analyzer.analyzeEverything()
@@ -106,3 +109,6 @@ if __name__ == '__main__':
   analyzer.analyzeCommandsUsage()
   print("> RUNNING ANALYZE USER STATUS METHOD")
   analyzer.analyzeUserStatus()
+
+# if __name__ == '__main__':
+#   runThisScript()
