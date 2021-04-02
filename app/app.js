@@ -15,20 +15,19 @@ ApplicationFeatures.className = "section";
 ApplicationFeatures.innerHTML = `
 <div class="option_card">
   <h3 class="option_title">Analyze Everything</h3>
-  <button class="get_option_button non-decorated">Check Status</button>
+  <button class="get_option_button non-decorated" onclick="window.open('');">Check Status</button>
 </div>
 <div class="option_card">
   <h3 class="option_title">Analyze Commands Usage</h3>
-  <button class="get_option_button non-decorated">Check Status</button>
+  <button class="get_option_button non-decorated" onclick="window.open('app/results/commands_usage/command_usage.htm');">Check Status</button>
 </div>
 <div class="option_card">
   <h3 class="option_title">Analyze User Status</h3>
-  <button class="get_option_button non-decorated">Check Status</button>
+  <button class="get_option_button non-decorated" onclick="window.open('');">Check Status</button>
 </div>
 `;
 
 Application.append(ApplicationFeatures);
-
 
 let notification = document.createElement("div");
 notification.className = "notification";
