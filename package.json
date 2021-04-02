@@ -1,0 +1,32 @@
+{
+  "name": "designsystem-bot",
+  "version": "1.0.0",
+  "description": "This is a bot based on python, js",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "dsbot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashsehgal/designsystem-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "designsystems",
+    "thedesignsystems",
+    "discordbot",
+    "python",
+    "javascript",
+    "analytics",
+    "opensource"
+  ],
+  "author": "yashsehgal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashsehgal/designsystem-bot/issues"
+  },
+  "homepage": "https://github.com/yashsehgal/designsystem-bot#readme"
+}
