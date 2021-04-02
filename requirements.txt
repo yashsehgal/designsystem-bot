@@ -1,0 +1,7 @@
+pandas
+requests
+matplotlib
+discord
+flask
+jinja2
+werkzeug
